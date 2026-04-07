@@ -1,8 +1,8 @@
 /*Return the second largest number in the array.*/
 
 function secondLargest(arr) {
-  let max = arr[0];
-  let secondmax = arr[0];
+  let max = -Infinity;
+  let secondmax = -Infinity;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > max) {
       secondmax = max;
@@ -16,4 +16,4 @@ function secondLargest(arr) {
 
 console.log(secondLargest([10, 5, 30, 8, 20])); // 20
 console.log(secondLargest([1, 4, 1, 2])); // 2
-console.log(secondLargest([1, 1, 2])); // 1
+console.log(secondLargest([-1, -1, -2])); // 1
