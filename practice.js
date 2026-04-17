@@ -80,7 +80,7 @@ function practice(products) {
 
 console.log(practice(products));*/
 
-const users = [
+/*const users = [
   { id: 1, email: "a@gmail.com" },
   { id: 2, email: "b@gmail.com" },
 ];
@@ -93,4 +93,46 @@ function practice(users, email) {
   }
 }
 
-console.log(practice(users, "b@gmail.com"));
+console.log(practice(users, "b@gmail.com"));*/
+
+/*const orders = [
+  { id: 1, status: "pending" },
+  { id: 2, status: "completed" },
+  { id: 3, status: "pending" },
+];
+
+function practice(orders) {
+  let obj = {};
+  for (let order of orders) {
+    if (!obj[order.status]) {
+      obj[order.status] = [];
+    }
+    obj[order.status].push(order);
+  }
+  return obj;
+}
+
+console.log(practice(orders));*/
+
+const posts = [
+  {
+    id: 1,
+    comments: ["Good", "Nice"],
+  },
+  {
+    id: 2,
+    comments: ["Awesome"],
+  },
+];
+
+function practice(posts) {
+  let arr = [];
+  for (let post of posts) {
+    if (post.comments) {
+      arr = arr.concat(post.comments);
+    }
+  }
+  return arr;
+}
+
+console.log(practice(posts));
