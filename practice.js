@@ -46,7 +46,7 @@ function practice(cart) {
 
 console.log(practice(cart));*/
 
-const products = [
+/*const products = [
   { name: "Watch", price: 1500 },
   { name: "Pen", price: 50 },
   { name: "Bag", price: 1200 },
@@ -62,4 +62,35 @@ function practice(products) {
   return arr;
 }
 
-console.log(practice(products));
+console.log(practice(products));*/
+
+/*const products = [
+  { name: "Laptop", price: 50000 },
+  { name: "Phone", price: 20000 },
+];
+
+function practice(products) {
+  let arr = [];
+  for (let product of products) {
+    product.discountedPrice = product.price - product.price / 10;
+    arr.push(product);
+  }
+  return arr;
+}
+
+console.log(practice(products));*/
+
+const users = [
+  { id: 1, email: "a@gmail.com" },
+  { id: 2, email: "b@gmail.com" },
+];
+
+function practice(users, email) {
+  for (let user of users) {
+    if (user.email === email) {
+      return user;
+    }
+  }
+}
+
+console.log(practice(users, "b@gmail.com"));
