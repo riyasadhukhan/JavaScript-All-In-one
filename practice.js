@@ -114,7 +114,7 @@ function practice(orders) {
 
 console.log(practice(orders));*/
 
-const posts = [
+/*const posts = [
   {
     id: 1,
     comments: ["Good", "Nice"],
@@ -135,4 +135,45 @@ function practice(posts) {
   return arr;
 }
 
-console.log(practice(posts));
+console.log(practice(posts));*/
+
+/*const orders = [
+  { id: 1, amount: 500 },
+  { id: 2, amount: 1500 },
+  { id: 3, amount: 1000 },
+];
+
+function practice(orders) {
+  let total = 0;
+  for (let order of orders) {
+    total += order.amount;
+  }
+  return total;
+}
+
+console.log(practice(orders));*/
+
+const users = [
+  { id: 1, name: "Amit" },
+  { id: 2, name: "Priya" },
+];
+
+const orders = [
+  { userId: 1, product: "Shoes" },
+  { userId: 1, product: "Shirt" },
+  { userId: 2, product: "Bag" },
+];
+
+function practice(users, orders) {
+  for (let user of users) {
+    user.orders = [];
+    for (let order of orders) {
+      if (user.id === order.userId) {
+        user.orders.push(order.product);
+      }
+    }
+  }
+  return users;
+}
+
+console.log(practice(users, orders));
