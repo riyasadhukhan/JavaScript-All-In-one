@@ -153,7 +153,7 @@ function practice(orders) {
 
 console.log(practice(orders));*/
 
-const users = [
+/*const users = [
   { id: 1, name: "Amit" },
   { id: 2, name: "Priya" },
 ];
@@ -176,4 +176,46 @@ function practice(users, orders) {
   return users;
 }
 
-console.log(practice(users, orders));
+console.log(practice(users, orders));*/
+
+/*const sales = [
+  { product: "Laptop", quantity: 5 },
+  { product: "Phone", quantity: 10 },
+  { product: "Tablet", quantity: 7 },
+];
+
+function practice(sales) {
+  let n = sales.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (sales[j].quantity < sales[j + 1].quantity) {
+        let temp = sales[j];
+        sales[j] = sales[j + 1];
+        sales[j + 1] = temp;
+      }
+    }
+  }
+  return sales.slice(0, 2);
+}
+
+console.log(practice(sales));*/
+
+const users = [
+  { name: "A", email: "a@mail.com" },
+  { name: "B", email: "b@mail.com" },
+  { name: "A2", email: "a@mail.com" },
+];
+
+function practice(users) {
+  let seen = new Set();
+  let newArr = [];
+  for (let user of users) {
+    if (!seen.has(user.email)) {
+      seen.add(user.email);
+      newArr.push(user);
+    }
+  }
+  return newArr;
+}
+
+console.log(practice(users));
