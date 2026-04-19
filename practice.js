@@ -200,7 +200,7 @@ function practice(sales) {
 
 console.log(practice(sales));*/
 
-const users = [
+/*const users = [
   { name: "A", email: "a@mail.com" },
   { name: "B", email: "b@mail.com" },
   { name: "A2", email: "a@mail.com" },
@@ -218,4 +218,19 @@ function practice(users) {
   return newArr;
 }
 
-console.log(practice(users));
+console.log(practice(users));*/
+
+const cart = [
+  { product: "Book", price: 200, quantity: 2 },
+  { product: "Pen", price: 50, quantity: 3 },
+];
+
+function practice(cart) {
+  let total = 0;
+  for (let item of cart) {
+    total += item.price * item.quantity;
+  }
+  return total + (total * 18) / 100;
+}
+
+console.log(practice(cart));
