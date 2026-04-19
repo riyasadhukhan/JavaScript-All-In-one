@@ -220,7 +220,7 @@ function practice(users) {
 
 console.log(practice(users));*/
 
-const cart = [
+/*const cart = [
   { product: "Book", price: 200, quantity: 2 },
   { product: "Pen", price: 50, quantity: 3 },
 ];
@@ -233,4 +233,20 @@ function practice(cart) {
   return total + (total * 18) / 100;
 }
 
-console.log(practice(cart));
+console.log(practice(cart));*/
+
+const apiData = [{ id: 1, first_name: "Amit", last_name: "Sharma" }];
+
+function practice(apiData) {
+  let newArr = [];
+  for (let item of apiData) {
+    let obj = {
+      id: item.id,
+      fullName: `${item.first_name} ${item.last_name}`,
+    };
+    newArr.push(obj);
+  }
+  return newArr;
+}
+
+console.log(practice(apiData));
