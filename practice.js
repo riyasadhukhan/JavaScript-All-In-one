@@ -235,7 +235,7 @@ function practice(cart) {
 
 console.log(practice(cart));*/
 
-const apiData = [{ id: 1, first_name: "Amit", last_name: "Sharma" }];
+/*const apiData = [{ id: 1, first_name: "Amit", last_name: "Sharma" }];
 
 function practice(apiData) {
   let newArr = [];
@@ -249,4 +249,19 @@ function practice(apiData) {
   return newArr;
 }
 
-console.log(practice(apiData));
+console.log(practice(apiData));*/
+
+const logs = ["login", "logout", "login", "signup"];
+
+function practice(logs) {
+  let obj = {};
+  for (let i = 0; i < logs.length; i++) {
+    if (!obj[logs[i]]) {
+      obj[logs[i]] = 0;
+    }
+    obj[logs[i]]++;
+  }
+  return obj;
+}
+
+console.log(practice(logs));
