@@ -9,24 +9,32 @@ class User {
     this.isLoggedIn = false;
   }
   login() {
+    if (this.isLoggedIn) {
+      console.log(`${this.name} is already logged in`);
+      return;
+    }
     this.isLoggedIn = true;
-    console.log(`${this.name} is now logged in`);
+    console.log(`${this.name} has logged in successfully`);
   }
   logout() {
+    if (!this.isLoggedIn) {
+      console.log(`${this.name} is already logged out`);
+      return;
+    }
     this.isLoggedIn = false;
-    console.log(`${this.name} is now logged out`);
+    console.log(`${this.name} has logged out successfully`);
   }
   getStatus() {
-    if (this.isLoggedIn) {
-      console.log(`Status: Logged In`);
-    } else {
-      console.log(`Status: Logged Out`);
-    }
+    console.log(
+      `${this.name} is currently ${this.isLoggedIn ? "logged in" : "logged out"}`,
+    );
   }
 }
 
 const user1 = new User("Amit", "amit@mail.com");
 user1.login();
+user1.login();
 user1.getStatus();
+user1.logout();
 user1.logout();
 user1.getStatus();
